@@ -83,7 +83,7 @@ type CSRFConfig struct {
 	CookieMaxAge int
 
 	// Indicates if CSRF cookie is secure.
-	// Optional. Default value false.
+	// Optional. Default value true.
 	CookieSecure bool
 
 	// Indicates if CSRF cookie is HTTP only.
@@ -109,6 +109,7 @@ var DefaultCSRFConfig = CSRFConfig{
 	ContextKey:     "csrf",
 	CookieName:     "_csrf",
 	CookieMaxAge:   86400,
+	CookieSecure:   true,
 	CookieSameSite: http.SameSiteDefaultMode,
 }
 
